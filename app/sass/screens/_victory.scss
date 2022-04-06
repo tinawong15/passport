@@ -1,0 +1,79 @@
+#victory-details {
+    font-size: 2.0rem;
+    padding: 10px;
+
+    .victory-flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        .minor-card {
+            width: 200px;
+            height: 120px;
+            max-width: 20vw;
+            max-height: 12vw;
+            font-size: 1.25rem;
+
+            .generic-address {
+                font-size: 0.4rem;
+            }
+            
+            img{
+                width: 50px;
+                max-width: 5vw;
+            }
+        }
+
+        .victory-card {
+            position: relative;
+            flex-direction: column;
+            margin: 10px 2vw;
+            color: black;
+            background-color: white;
+
+            .generic-address {
+                position: absolute;
+                left: 2%;
+                top: 0px;
+                text-align: left;
+            }
+            
+            .victory-card-stamp {
+                top: 0px;
+                right: 0px;
+                display: block;
+                position: absolute;
+            }
+
+            .victory-card-info {
+                position: absolute;
+                left: 50%;
+                top: 60%;
+                width: 90%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        #grade-with-all-correct-card .victory-card-info {
+            font-size: 1rem;
+        }
+
+        #final-grade-card {
+            width: 330px;
+            height: 198px;
+            max-width: 33vw;
+            max-height: 19.8vw;
+            font-size: 2.5rem;
+
+            .generic-address {
+                font-size: .75rem;
+            }
+            
+            img{
+                width: 83px;
+                max-width: 8.25vw;
+            }
+        }
+    }
+}

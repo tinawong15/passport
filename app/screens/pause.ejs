@@ -1,0 +1,19 @@
+<% include partials/header %>
+
+<!-- Page Content goes here -->
+
+<div id="pause-screen" class="container-inner screen-overlay screen">
+    <div class="center">
+        <h3>
+            <%= capitalizedMode %>s of <%= capitalizedRegionName %><span id="subregion-type"></span>
+        </h3>
+
+        <p>
+            Game is now paused. Even diplomats need breaks every now and then.
+        </p>
+
+
+        <button id="play-button" class="stamp-button">Continue</button>
+    </div>
+</div>
+<% include partials/footer %>

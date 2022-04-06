@@ -1,0 +1,947 @@
+#passport-screen {
+    #passport {
+        margin-top: 10px;
+        color: black;
+
+        img {
+            width: 100%;
+            max-height: 100vh;
+        }
+
+        #passport-cover {
+            background-color:""
+        }
+
+        .passport-pages {
+            background-color: $card-white;
+            background-image: radial-gradient($card-white 50%, $card-yellow);
+            
+            &.even {
+                border-radius: 20px 0 0 20px;
+            }
+            &.odd {
+                border-radius: 0 20px 20px 0;
+            }
+            .page-content {
+                padding: 0 10px 0 10px;
+
+                i {
+                    font-size: 2em;
+                }
+            }
+
+            .passport-center-line-1,
+            .passport-center-line-2{
+                position:absolute;
+                border-color: rgb(75,110,138);
+                border-width: 2px;
+                border-style: solid;
+            }
+            .passport-center-line-1{
+                left:100%;
+                top:0%;
+                height:100%;
+            }
+            .passport-center-line-2{
+                left:0%;
+                top:0%;
+                height:100%;
+            }
+
+            .passport-form-line {
+                border-color: rgb(75,110,138);
+                border-width: 2px;
+                border-style: solid;
+            }
+            .even-passport-page-number, .odd-passport-page-number {
+                font-family: 'BebasNeue-Regular';
+                font-size: 36pt;
+                position: absolute;
+            }
+            .even-passport-page-number {
+                top:90%;
+                left:5%;
+            }
+            .odd-passport-page-number {
+                top:90%;
+                left:90%;
+            }
+
+            .passport-input-prompt,
+            .passport-header, 
+            .passport-sub-header, 
+            .passport-left-sub-header,
+            .passport-text, 
+            .passport-text-caps,
+            .visas-footer {
+                font-family: 'OCRB';
+                color: rgb(75,110,138);
+            }
+
+            .passport-header {
+                font-size: 28pt;
+            }
+
+            .passport-sub-header {
+                font-size: 14pt;
+                text-decoration: underline;
+                text-align: center;
+            }
+
+            .passport-left-sub-header {
+                font-size: 10pt;
+                text-decoration: underline;
+                text-align: left;
+            }
+
+            .passport-text {
+                font-size: 14pt;
+                text-align: left;
+            }
+
+            .passport-text-caps {
+                font-size: 10pt;
+                font-weight: bold;
+                text-align: left;
+            }
+
+            .passport-photo {
+                width: 30%;
+            }
+
+            .typewriter {
+                font-family: 'SpecialElite-Regular';
+                font-size:1vw;
+            }         
+            .passport-input-prompt {
+                font-size:10pt;
+            }
+            .scrollable-content {
+                overflow: scroll;
+                text-align: left;
+                position:absolute;
+                width:90%;
+                height:80%;
+                top:10%;
+                left:5%;
+            }
+
+            
+            #credentials-name-box {
+                position:absolute;
+                width:90%;
+                height:10%;
+                left:5%;
+                top:10%;
+            }
+            #credentials-issue-date-box{
+                position:absolute;
+                width:45%;
+                height:10%;
+                left:5%;
+                top:20%;
+            }
+            #credentials-expires-date-box{
+                position:absolute;
+                width:45%;
+                height:10%;
+                left:50%;
+                top:20%;
+            }
+            #credentials-passport-number-box{
+                position:absolute;
+                width:90%;
+                height:10%;
+                left:5%;
+                top:30%;
+            }
+            #credentials-name-text {
+                position:absolute;
+                top:14%;
+                left:7%;
+            }
+            #credentials-issue-date-text{
+                position:absolute;
+                top:24%;
+                left:7%;
+            }
+            #credentials-expires-date-text{
+                position:absolute;
+                left:52%;
+                top:24%;
+            }
+            #credentials-passport-number-text{
+                position:absolute;
+                left:7%;
+                top:34%;
+            }
+            #credentials-name-prompt {
+                position:absolute;
+                top:11%;
+                left:6%;
+            }
+            #credentials-issue-date-prompt{
+                position:absolute;
+                top: 21%;
+                left: 6%;
+            }
+            #credentials-expires-date-prompt{
+                position:absolute;
+                left:51%;
+                top:21%;
+            }
+            #credentials-passport-number-prompt{
+                position:absolute;
+                left:6%;
+                top:31%;
+            }
+            #credentials-photo{
+                position:absolute;
+                left:5%;
+                top:41%;
+                height:25%;                
+            }
+            #credentials-signature{
+                position:absolute;
+                top:65%;
+                left:40%;
+                font-family:'DancingScript-Regular';
+                font-size:14pt;
+            }
+            #credentials-signature-line{
+                position:absolute;
+                height:2px;
+                width:50%;
+                left:40%;
+                top:70%;
+            }
+            #credentials-signature-prompt{
+                position:absolute;
+                left:40%;
+                top:71%;
+            }
+            #credentials-statement {
+                position: absolute;
+                left:40%;
+                width:55%;
+                top:41%;
+                text-align:left;
+            }
+            #credentials-important-prompt{
+                position:absolute;
+                left:5%;
+                top:80%;
+            }
+            #credentials-passport-valid-text{
+                position:absolute;
+                left:30%;
+                top:80%;
+                width:65%;
+            }
+            #credentials-secretary-statement-text {
+                position:absolute;
+                width:90%;
+                left:5%;
+                top:10%;
+            }
+            #credentials-rv-stamp {
+                position:absolute;
+                width:40%;
+                left:5%;
+                top:27%;
+            }
+            #credentials-rv-flag {
+                position:absolute;
+                width: 40%;
+                left:55%;
+                top:27%;
+            }
+            #credentials-notice-heading {
+                position:absolute;
+                width:90%;
+                left:5%;
+                text-align:center;
+                top:50%;
+            }
+            #credentials-notice-text {
+                position:absolute;
+                width:90%;
+                left:5%;
+                text-align:left;
+                top:55%;
+            }
+            #credentials-death {
+                position:absolute;
+                width:90%;
+                left:5%;
+                text-align:left;
+                top:80%;
+            }   
+            
+
+            .visas-entries-subheader{
+                position:absolute;
+                left:0%;
+                width:50%;
+                top:6%;
+                text-align:center;
+            }
+            .visas-title-subheader{
+                position:absolute;
+                left:50%;
+                width:50%;
+                top:6%;
+                text-align:center;
+            }
+                .visas-top-line,
+                .visas-mid-line,
+                .visas-bottom-line,
+                .visas-center-line,
+                .visas-vertical-line {
+                    border-color: rgb(75,110,138);
+                    border-width: 2px;
+                    border-style: solid;
+                }
+                .visas-top-line{
+                    position:absolute;
+                    width:100%;
+                    left:0%;
+                    top:10%;
+                }
+                .visas-mid-line{
+                    position:absolute;
+                    width:100%;
+                    left:0%;
+                    top:50%;
+                }
+                .visas-bottom-line{
+                    position:absolute;
+                    width:100%;
+                    left:0%;
+                    top:90%;
+                }
+                .visas-vertical-line{
+                    position:absolute;
+                    top:10%;
+                    height:80%;
+                    left:50%;
+                }
+                .visas-footer{
+                    position:absolute;
+                    top:92%;
+                    left:20%;
+                    width:60%;
+                    text-decoration:underline;
+                    font-size:10pt;
+                    text-align: left;                  
+                }
+
+            .board-text {
+                    font-family: 'Solari'
+                }
+            
+
+            
+
+            .cabinet-photo{
+                position:absolute;
+                left:5%;
+                width:25%;
+                top:15%;
+            }
+            .cabinet-details-table{
+                position:absolute;
+                left:45%;
+                width:50%;
+                top:10%;
+                height:15%;
+                text-align:left;
+            }
+            .cabinet-rv-stamp {
+                position:absolute;
+                left:45%;
+                top:30%;
+                width:40%;
+            }
+            .cabinet-top-line,
+            .cabinet-mid-line,
+            .cabinet-vertical-line {
+                border-color: rgb(75,110,138);
+                border-width: 2px;
+                border-style: solid;
+            }
+            .cabinet-top-line{
+                position:absolute;
+                width:100%;
+                left:0%;
+                top:10%;
+            }
+            .cabinet-mid-line{
+                position:absolute;
+                width:100%;
+                left:0%;
+                top:50%;
+            }
+            .cabinet-vertical-line{
+                position:absolute;
+                top:10%;
+                height:40%;
+                left:40%;
+            }
+            .cabinet-bio {
+                position:absolute;
+                left:5%;
+                top:55%;
+                text-align:left;
+            }
+            .cabinet-details-row {
+                padding-bottom:1px;
+                border-spacing: 0px;
+            }
+            .cabinet-prompt {
+                padding-right:5px;
+                font-weight:bold;
+            }
+            .cabinet-data {
+            }
+            
+        }
+    }
+    
+        .passport-nav-button {
+            position:absolute;
+            width:9%;
+            height:5%;
+            font-size:10pt;
+            border-radius: 5%;
+            border-color: black;
+            color: black;
+            text-align:center;
+            z-index: -1;
+        }
+        .button-tab, .bottom-button-tab .passport-nav-tab-text {
+            color: black;
+        }
+        .passport-nav-tab-text {
+            font-weight:bold;
+            //opacity:100%;
+        }
+        .passport-nav-tab-plastic {            
+            position:absolute;
+            width:100%;
+            height:100%;
+            left:0%;
+            top:0%;
+            background-color: rgb(225,228,196);
+            //opacity: 50%;
+        }
+        .passport-nav-button:hover{
+            border-color:darkgray;
+        }
+
+        .button-tab, .bottom-button-tab {
+            position:absolute;
+            width:100%;
+            height:20%;
+            left:0%;
+        }
+        .button-tab{
+            top:0%;
+        }
+        .bottom-button-tab {
+            top:90%;
+        }
+    #credentials-button {
+        //left:36.5%;
+        //left:50%;
+        //top:11.5%;
+        //top:-1%;
+    }
+    #credentials-button>.button-tab {
+        background-color:blue;
+    }
+    #visas-button {
+        //left:45.5%;
+        //left:59%;
+        //top:11.5%;
+    }
+    #visas-button>.button-tab {
+        background-color:red;
+    }
+    #board-button {
+        //left:54.5%;
+        //left:68%;
+        //top:11.5%;
+    }
+    #board-button>.button-tab {
+        background-color:purple;
+    }
+    #itinerary-button {
+        //left:64%;
+        //left:73.6%;
+        //top:22.5%;
+        //transform:rotate(90deg);
+    }
+    #itinerary-button>.button-tab {
+        background-color: green;
+    }
+    #companions-button {
+        //left:64%;
+        //left:73.6%;
+        //top:39%;
+        //transform:rotate(90deg);
+    }
+    #companions-button>.button-tab{
+        background-color:pink;
+    }
+    #arrangements-button {
+        //left64%;
+        //left:73.6%;
+       // top:55.5%;
+        //transform:rotate(90deg);
+    }
+    #arrangements-button>.button-tab{
+        background-color:yellow;
+    }
+    #brochure-button {
+        //left:36.5%;
+        //left:50%;
+        //top:90%;
+    }
+    #brochure-button>.bottom-button-tab{
+        background-color:cyan;
+    }
+    #cabinet-button {
+        //left:45.5%;
+        //left:59%;
+        //top:90%;
+    }
+    #cabinet-button>.bottom-button-tab{
+        background-color: orange;
+    }
+    #advisories-button {
+        //left:54.5%;
+        //left:68%;
+        //top:90%;
+    }
+    #advisories-button>.bottom-button-tab{
+        background-color:salmon;
+    }
+    #board-prototype{
+        position:absolute;
+        background-color: #111111;
+        width:70%;
+        height:60%;
+        left:15%;
+        top:20%;
+
+        .board-header{
+            position:absolute;
+            width:100%;
+            left: 0%;
+            top:10%;
+            text-align: center;
+            font-family:Helvetica;
+            font-size:36pt;
+        }
+
+        .board-table-heading{
+            position:absolute;
+            width:100%;
+            left:0%;
+            top:25%;
+            font-size:12pt;
+            color:white;
+        }
+
+        .board-text {
+            font-family: 'Solari';
+            
+        }
+    }
+    .scroller {
+        scrollbar-color: #7f7f7f white; /* thumb and track color */
+        scrollbar-width: thin;
+      }
+      /* (values chosen for visual consistency with Firefox) */
+
+.scroller::-webkit-scrollbar {
+    width: 7.5px;
+  }
+  
+  .scroller::-webkit-scrollbar-track {
+    background: white;
+  }
+  
+  .scroller::-webkit-scrollbar-thumb {
+    background: #7f7f7f;
+    border-right: 1px solid white;
+  }
+
+  body {
+    background: #0f0f0f;
+    color: #fff;
+    font-family: helvetica, sans-serif;
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .splitflap {
+    width: 1800px;
+    overflow: none;
+    white-space: nowrap;
+    margin: 20px 10px;
+  }
+  .splitflap h1 {
+    text-transform: uppercase;
+    font-size: 2.5em;
+  }
+  .splitflap .header {
+    float: left;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .splitflap .row {
+    clear: both;
+    height: 60px;
+  }
+  .splitflap .group {
+    float: left;
+    margin-right: 30px;
+  }
+  .splitflap .separator {
+    float: left;
+    height: 40px;
+    width: 15px;
+    font-weight: bold;
+    font-size: 1.8em;
+  }
+  .splitflap .status {
+    margin-right: 0;
+  }
+  .splitflap .status div {
+    float: left;
+    margin: 10px 10px 0 0;
+    width: 18px;
+    height: 18px;
+  }
+  .splitflap .status div.on {
+    background-position: -18px 0;
+  }
+  .splitflap .status .sA {
+    background: url('../img/lights_green.png') no-repeat;
+  }
+  .splitflap .status .sB {
+    background: url('../img/lights_red.png') no-repeat;
+  }
+  .splitflap .full,
+  .splitflap .number,
+  .splitflap .character {
+    float: left;
+    margin-right: 5px;
+    width: 25px;
+    height: 40px;
+    background: url('../img/split-flap-letters-yellow-sm-full.png') no-repeat;
+    background-position: 0px 0px;
+  }
+  .splitflap .full span,
+  .splitflap .number span,
+  .splitflap .character span {
+    width: 25px;
+    height: 40px;
+    display: block;
+    background: url('../img/split-flap-letters-yellow-sm-full.png') no-repeat;
+    background-position: -25px 0px; /* start with a space */
+  }
+  
+  /* SPACE AND TRANSITION IMAGES */
+  .splitflap span.ctrn {
+    background-position: 0px 0px;
+  } /* transition */
+  .splitflap span.csp {
+    background-position: -25px 0px;
+  } /* space */
+  /* FULL SET DRUM */
+  .splitflap .full span.csp {
+    background-position: -25px 0px;
+  } /* space */
+  .splitflap .full span.cA {
+    background-position: -50px 0px;
+  } /* A */
+  .splitflap .full span.cB {
+    background-position: -75px 0px;
+  }
+  .splitflap .full span.cC {
+    background-position: -100px 0px;
+  }
+  .splitflap .full span.cD {
+    background-position: -125px 0px;
+  }
+  .splitflap .full span.cE {
+    background-position: -150px 0px;
+  }
+  .splitflap .full span.cF {
+    background-position: -175px 0px;
+  }
+  .splitflap .full span.cG {
+    background-position: -200px 0px;
+  }
+  .splitflap .full span.cH {
+    background-position: -225px 0px;
+  }
+  .splitflap .full span.cI {
+    background-position: -250px 0px;
+  }
+  .splitflap .full span.cJ {
+    background-position: -275px 0px;
+  }
+  .splitflap .full span.cK {
+    background-position: -300px 0px;
+  }
+  .splitflap .full span.cL {
+    background-position: -325px 0px;
+  }
+  .splitflap .full span.cM {
+    background-position: -350px 0px;
+  }
+  .splitflap .full span.cN {
+    background-position: -375px 0px;
+  }
+  .splitflap .full span.cO {
+    background-position: -400px 0px;
+  }
+  .splitflap .full span.cP {
+    background-position: -425px 0px;
+  }
+  .splitflap .full span.cQ {
+    background-position: -450px 0px;
+  }
+  .splitflap .full span.cR {
+    background-position: -475px 0px;
+  }
+  .splitflap .full span.cS {
+    background-position: -500px 0px;
+  }
+  .splitflap .full span.cT {
+    background-position: -525px 0px;
+  }
+  .splitflap .full span.cU {
+    background-position: -550px 0px;
+  }
+  .splitflap .full span.cV {
+    background-position: -575px 0px;
+  }
+  .splitflap .full span.cW {
+    background-position: -600px 0px;
+  }
+  .splitflap .full span.cX {
+    background-position: -625px 0px;
+  }
+  .splitflap .full span.cY {
+    background-position: -650px 0px;
+  }
+  .splitflap .full span.cZ {
+    background-position: -675px 0px;
+  } /* Z */
+  .splitflap .full span.c0 {
+    background-position: -700px 0px;
+  } /* 0 */
+  .splitflap .full span.c1 {
+    background-position: -725px 0px;
+  }
+  .splitflap .full span.c2 {
+    background-position: -750px 0px;
+  }
+  .splitflap .full span.c3 {
+    background-position: -775px 0px;
+  }
+  .splitflap .full span.c4 {
+    background-position: -800px 0px;
+  }
+  .splitflap .full span.c5 {
+    background-position: -825px 0px;
+  }
+  .splitflap .full span.c6 {
+    background-position: -850px 0px;
+  }
+  .splitflap .full span.c7 {
+    background-position: -875px 0px;
+  }
+  .splitflap .full span.c8 {
+    background-position: -900px 0px;
+  }
+  .splitflap .full span.c9 {
+    background-position: -925px 0px;
+  } /* 9 */
+  .splitflap .full span.cper {
+    background-position: -950px 0px;
+  } /* . */
+  .splitflap .full span.ccom {
+    background-position: -975px 0px;
+  } /* , */
+  .splitflap .full span.cque {
+    background-position: -1000px 0px;
+  } /* ? */
+  .splitflap .full span.cexc {
+    background-position: -1025px 0px;
+  } /* ! */
+  .splitflap .full span.csla {
+    background-position: -1050px 0px;
+  } /* / */
+  .splitflap .full span.capo {
+    background-position: -1075px 0px;
+  } /* ' */
+  .splitflap .full span.cplu {
+    background-position: -1100px 0px;
+  } /* + */
+  .splitflap .full span.cmin {
+    background-position: -1125px 0px;
+  } /* - */
+  .splitflap .full span.ccol {
+    background-position: -1150px 0px;
+  } /* : */
+  .splitflap .full span.cat {
+    background-position: -1175px 0px;
+  } /* @ */
+  .splitflap .full span.chsh {
+    background-position: -1200px 0px;
+  } /* # */
+  .splitflap .full span.cup {
+    background-position: -1225px 0px;
+  } /* ↓ */
+  .splitflap .full span.cdn {
+    background-position: -1250px 0px;
+  } /* ↓ */
+  /* NUMBERS ONLY DRUM */
+  .splitflap .number span.csp {
+    background-position: -25px 0px;
+  } /* space */
+  .splitflap .number span.c0 {
+    background-position: -700px 0px;
+  } /* 0 */
+  .splitflap .number span.c1 {
+    background-position: -725px 0px;
+  }
+  .splitflap .number span.c2 {
+    background-position: -750px 0px;
+  }
+  .splitflap .number span.c3 {
+    background-position: -775px 0px;
+  }
+  .splitflap .number span.c4 {
+    background-position: -800px 0px;
+  }
+  .splitflap .number span.c5 {
+    background-position: -825px 0px;
+  }
+  .splitflap .number span.c6 {
+    background-position: -850px 0px;
+  }
+  .splitflap .number span.c7 {
+    background-position: -875px 0px;
+  }
+  .splitflap .number span.c8 {
+    background-position: -900px 0px;
+  }
+  .splitflap .number span.c9 {
+    background-position: -925px 0px;
+  } /* 9 */
+  .splitflap .number span.cper {
+    background-position: -950px 0px;
+  } /* . */
+  .splitflap .number span.ccom {
+    background-position: -975px 0px;
+  } /* , */
+  /* CHARACTERS ONLY DRUM */
+  .splitflap .character span.csp {
+    background-position: -25px 0px;
+  } /* space */
+  .splitflap .character span.cA {
+    background-position: -50px 0px;
+  } /* A */
+  .splitflap .character span.cB {
+    background-position: -75px 0px;
+  }
+  .splitflap .character span.cC {
+    background-position: -100px 0px;
+  }
+  .splitflap .character span.cD {
+    background-position: -125px 0px;
+  }
+  .splitflap .character span.cE {
+    background-position: -150px 0px;
+  }
+  .splitflap .character span.cF {
+    background-position: -175px 0px;
+  }
+  .splitflap .character span.cG {
+    background-position: -200px 0px;
+  }
+  .splitflap .character span.cH {
+    background-position: -225px 0px;
+  }
+  .splitflap .character span.cI {
+    background-position: -250px 0px;
+  }
+  .splitflap .character span.cJ {
+    background-position: -275px 0px;
+  }
+  .splitflap .character span.cK {
+    background-position: -300px 0px;
+  }
+  .splitflap .character span.cL {
+    background-position: -325px 0px;
+  }
+  .splitflap .character span.cM {
+    background-position: -350px 0px;
+  }
+  .splitflap .character span.cN {
+    background-position: -375px 0px;
+  }
+  .splitflap .character span.cO {
+    background-position: -400px 0px;
+  }
+  .splitflap .character span.cP {
+    background-position: -425px 0px;
+  }
+  .splitflap .character span.cQ {
+    background-position: -450px 0px;
+  }
+  .splitflap .character span.cR {
+    background-position: -475px 0px;
+  }
+  .splitflap .character span.cS {
+    background-position: -500px 0px;
+  }
+  .splitflap .character span.cT {
+    background-position: -525px 0px;
+  }
+  .splitflap .character span.cU {
+    background-position: -550px 0px;
+  }
+  .splitflap .character span.cV {
+    background-position: -575px 0px;
+  }
+  .splitflap .character span.cW {
+    background-position: -600px 0px;
+  }
+  .splitflap .character span.cX {
+    background-position: -625px 0px;
+  }
+  .splitflap .character span.cY {
+    background-position: -650px 0px;
+  }
+  .splitflap .character span.cZ {
+    background-position: -675px 0px;
+  } /* Z */
+  .splitflap .character span.cper {
+    background-position: -950px 0px;
+  } /* . */
+  .splitflap .character span.ccom {
+    background-position: -975px 0px;
+  } /* , */
+}
+  

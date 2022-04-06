@@ -1,0 +1,155 @@
+.game-mode-icon {
+    text-shadow: -1px 1px 0 #000,
+				1px 1px 0 #000,
+				1px -1px 0 #000,
+				-1px -1px 0 #000;
+
+    &.mdi-earth {
+        color: #4fc3f7;
+    }
+
+    &.mdi-bank {
+        color: #4d4d4d;
+    }
+
+    &.mdi-crown {
+        color: #fff176;
+    }
+
+    &.mdi-flag {
+        color: #e57373;
+    }
+
+    &.mdi-map-marker {
+        color: #69f0ae;
+    }
+
+    &.mdi-script-text {
+        color: #fca259;
+    }
+
+    &.mdi-brain {
+        color: #ff6694;
+    }
+
+    &.mdi-pencil-outline {
+        color: #5dffff;
+    }
+}
+
+.game-mode-select {
+
+    @include transition(all 0.5 ease-in);
+
+    font-size: 2.5rem;
+    padding: 10px;
+
+    // TODO decide on colors
+
+    &:hover {
+        color: #fff;
+        cursor: pointer;
+    }
+
+    &.disabled {
+        color: #666;
+
+        &:hover {
+            cursor: not-allowed;
+        }
+    }
+}
+
+.material-tooltip {
+    // override dynamic position relative
+    position: fixed !important;
+}
+
+#search-region {
+    position: fixed;
+    width: 400px;
+    bottom: 30px;
+    right: 30px;
+    background: #fff;
+    padding: 5px;
+
+    .input-field {
+        margin-top: 0;
+        padding-right: 25px;
+    }
+
+    i {
+        position: absolute;
+        font-size: 1.5rem;
+    }
+
+    input {
+        display: inline;
+        padding-left: 10px;
+        margin: 0 30px;
+    }
+
+    .mdi {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    #submit-btn {
+        background-color: transparent;
+        border: none;
+    }
+
+    .autocomplete-content {
+        position: absolute;
+        bottom: 100%;
+    }
+}
+
+#map-message {
+    position: fixed;
+    bottom: 0px;
+    left: 30px;
+    opacity: 0.9;
+    font-size: 1.1rem;
+}
+
+#mode-message {
+    position: fixed;
+    bottom: 0px;
+    right: 30px;
+    opacity: 0.9;
+    font-size: 1.1rem;
+}
+
+#show-button {
+    &:hover {
+        color: #fff;
+        cursor: pointer;
+    }
+}
+
+#game-select {
+    border: 3px solid blue;
+    bottom: 50%;
+    right: 50%;
+    top: 25%;
+    left: 25%;
+    background-color: lightblue;
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    display: none;
+
+    #hide-button, #submit-button {
+        &:hover {
+            color: white;
+            cursor: pointer;
+        }
+    }
+}
+
+.mode-select-radio {
+    display: inline-block;
+    top: 20px;
+    left: 20px;
+}

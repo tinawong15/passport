@@ -1,0 +1,124 @@
+<% include partials/header %>
+<div id="victory-screen" class="container-inner screen-overlay screen">
+    <div class="center">
+        <h3>Victory!</h3>
+        <div id="victory-details">
+            <div class="victory-flex">
+                <div id="time-victory-card" class="victory-card minor-card postcard">
+                    <div class="generic-address">
+                        ___________<br>
+                        _______________________<br />
+                        _______________________
+                    </div>
+                    <div class="card-icon">
+                        <img src="/img/postcard.png"/>
+                    </div>
+                    <div class="victory-card-info">
+                        <strong>Time:</strong><br><%= gameInfo.seconds %> seconds
+                    </div>
+                </div>
+                <div id="correct-percentage-card" class="victory-card minor-card postcard">
+                    <div class="generic-address">
+                        ___________<br>
+                        _______________________<br />
+                        _______________________
+                    </div>
+                    <div class="card-icon">
+                        <img src="/img/postcard.png"/>
+                    </div>
+                    <div class="victory-card-info">
+                        <strong>Correct Clicks:</strong> <%= gameInfo.correct %> <br>
+                        <strong>Incorrect/Skips:</strong> <%= gameInfo.incorrect %><br>
+                        <strong>% Correct:</strong> <%= gameInfo.correctPercentage %>&#37;
+                    </div>
+                </div>
+            </div>
+            <div class="victory-flex">
+                <div id="final-grade-card" class="victory-card postcard">
+                    <div class="generic-address">
+                        ___________<br>
+                        _______________________<br />
+                        _______________________
+                    </div>
+                    <div class="card-icon">
+                        <img src="/img/postcard.png"/>
+                    </div>
+                    <div class="victory-card-info">
+                        <strong>Final Grade:</strong><br><%= gradeInfo.grade %>
+                    </div>
+                </div>
+            </div>
+            <div class="victory-flex">
+                <% if (gradeInfo.nextGrade) { %>
+                    <% if (!isNaN(gradeInfo.time_req)) { %>
+                        <div id="time-for-next-grade-card" class="victory-card minor-card postcard">
+                            <div class="generic-address">
+                                ___________<br>
+                                _______________________<br />
+                                _______________________
+                            </div>
+                            <div class="card-icon">
+                                <img src="/img/postcard.png"/>
+                            </div>
+                            <div class="victory-card-info">
+                                    <strong>Time to Needed to Receive <%= gradeInfo.nextGrade %>:</strong><br>
+                                    <%= gradeInfo.time_req %> seconds
+                            </div>
+                        </div>
+                    <% } %>
+                    <% if (!isNaN(gradeInfo.score_req)) { %>
+                        <div id="score-for-next-grade-card" class="victory-card minor-card postcard">
+                            <div class="generic-address">
+                                ___________<br>
+                                _______________________<br />
+                                _______________________
+                            </div>
+                            <div class="card-icon">
+                                <img src="/img/postcard.png"/>
+                            </div>
+                            <div class="victory-card-info">
+                                <strong>Correct Percentage to Receive <%= gradeInfo.nextGrade %>:</strong><br>
+                                <%= gradeInfo.score_req %>&#37;
+                            </div>
+                        </div>
+                    <% } %>
+                <% } %>
+                <div id="high-score-card" class="victory-card minor-card postcard">
+                    <div class="generic-address">
+                        ___________<br>
+                        _______________________<br />
+                        _______________________
+                    </div>
+                    <div class="card-icon">
+                        <img src="/img/postcard.png"/>
+                    </div>
+                    <div class="victory-card-info">
+                        <strong>High Score:</strong><br>
+                        <%= gradeInfo.grade %>
+                    </div>
+                </div>
+                <div id="rank-card" class="victory-card minor-card postcard">
+                    <div class="generic-address">
+                        ___________<br>
+                        _______________________<br />
+                        _______________________
+                    </div>
+                    <div class="card-icon">
+                        <img src="/img/postcard.png"/>
+                    </div>
+                    <div class="victory-card-info">
+                        <strong>Rank:</strong><br>
+                        <%= gradeInfo.rank %>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="victory-controls">
+            <a id="replay-button" href="/map?region=<%=encodeURIComponent(regionPath) %>" class="stamp-button">
+                Return to <%= capitalizedRegionName %> Map
+            </a>
+        </div>
+    </div>
+</div>
+<% include partials/footer %>

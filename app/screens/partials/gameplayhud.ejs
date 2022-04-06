@@ -1,0 +1,113 @@
+<div id="game-data">
+    <i class="rv-icons mdi mdi-clock"></i> <span id="time">0:00</span><br/>
+    <i class="rv-icons mdi mdi-help-circle"></i> <span id="remaining">0</span><br/>
+    <i class="rv-icons mdi mdi-check-circle"></i> <span id="correct">0</span><br/>
+    <i class="rv-icons mdi mdi-close-box"></i> <span id="incorrect">0</span><br/>
+    <br/>
+    <div id="info-score">
+        <i class="rv-icons mdi mdi-trophy"></i> <span id="score">0</span>&#37;
+    </div>
+    <i class="rv-icons mdi mdi-trophy-award"></i> <span id="high-score">0</span>
+    </br/>
+    </br/>
+    <div id="gameplay-buttons">
+        <div id="playpause" class="gameplay-button">
+            <i id="playpause-button" class="rv-icons mdi mdi-play"></i>
+        </div>
+        <div id="skip" class="gameplay-button tooltipped" data-tooltip="SKIP CARD" data-position="top">
+            <i id="skip-button" class="rv-icons mdi mdi-priority-low"></i>
+        </div>
+        <div id="reset-zoom" class="gameplay-button tooltipped" data-tooltip="RESET ZOOM" data-position="top">
+            <i id="reset-zoom-button"  class="rv-icons mdi mdi-magnify-scan"></i>
+        </div>
+    </div>
+</div>
+
+<div id="card-area-wrapper">
+    <div id="card-area" class="col s3" data-len="<%= cards.length %>">
+        <% for (let card of cards) { %>
+            <div id="<%- card.id %>" class="game-card col s12" data-content="<%=card.content%>" img-content="<%=card.img_url%>">
+                <div class="gameplay-card postcard" <% if (card.img_url) { %> style="background-image:url('<%=card.img_url%>')" <% } %>  >
+                    <div class="card-content">
+                        <div class="type-powerup">
+                            <div class="generic-address">
+                                ----------------<br />
+                                ------------------------------------<br />
+                                ------------------------------------
+                            </div>
+                            <span class="card-icon">
+                                <img src="/img/postcard.png" />
+                            </span>
+                            <% if (mode != 'flag') { %>
+                                <div class="card-title">
+                                    <span id="<%- card.id %>-content"><%=card.content%></span>
+                                </div>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    </div>
+    <div id="draggable-area">
+        <div id="card-draggable">
+            <div id="card-draggable-image" class="gameplay-card postcard">
+                <div class="card-content">
+                    <div class="type-powerup">
+                        <% if (mode != 'flag') { %>
+                            <div class="generic-address">
+                                ----------------<br />
+                                ------------------------------------<br />
+                                ------------------------------------
+                            </div>
+                            <span class="card-icon" id="card-draggable-icon">
+                                <img src="/img/postcard.png" />
+                            </span>
+                            <div class="card-title">
+                                <span id="card-draggable-title"></span>
+                            </div>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="map-message-gameplay">
+    <p>
+        <% if (mode == 'name') { %>
+            <i class="game-mode-icon-selected game-mode-select-gameplay disabled mdi mdi-earth"></i>
+        <% } else { %>
+            <i class="game-mode-icon-disabled game-mode-select-gameplay disabled mdi mdi-earth"></i>
+        <% } %>
+        <% if (mode == 'capital') { %>
+            <i class="game-mode-icon-selected game-mode-select-gameplay disabled mdi mdi-bank"></i>
+        <% } else { %>
+            <i class="game-mode-icon-disabled game-mode-select-gameplay disabled mdi mdi-bank"></i>
+        <% } %>
+        <% if (mode == 'leader') { %>
+            <i class="game-mode-icon-selected game-mode-select-gameplay disabled mdi mdi-crown"></i>
+        <% } else { %>
+            <i class="game-mode-icon-disabled game-mode-select-gameplay disabled mdi mdi-crown"></i>
+        <% } %>
+        <% if (mode == 'flag') { %>
+            <i class="game-mode-icon-selected game-mode-select-gameplay disabled mdi mdi-flag"></i>
+        <% } else { %>
+            <i class="game-mode-icon-disabled game-mode-select-gameplay disabled mdi mdi-flag"></i>
+        <% } %>
+        <% if (mode == 'landmarks') { %>
+            <i class="game-mode-icon-selected game-mode-select-gameplay disabled mdi mdi-map-marker"></i>
+        <% } else { %>
+            <i class="game-mode-icon-disabled game-mode-select-gameplay disabled mdi mdi-map-marker"></i>
+        <% } %>
+    </p>
+</div>
+
+<div id="mode-message">
+    <p>
+        <i class="game-mode-icon-disabled game-mode-select-gameplay disabled mdi mdi-script-text"></i>
+        <i class="game-mode-icon-disabled game-mode-select-gameplay disabled mdi mdi-brain"></i>
+        <i class="game-mode-icon-selected game-mode-select-gameplay disabled mdi mdi-pencil-outline"></i> 
+    </p>
+</div>

@@ -1,0 +1,317 @@
+.gameplay {
+    #map-wrapper {
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    #game-data {
+        pointer-events: none;
+        position: fixed;
+        bottom: 5%;
+        left: 0%;
+        padding: 20px;
+        color: black;
+        font-size: 1.5rem;
+
+        #info-score {
+            font-size: 1.8rem;
+        }
+
+        #gameplay-buttons {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .gameplay-button {
+                font-size: 3.0rem;
+                cursor: pointer;
+                pointer-events: auto;
+                padding-right: 10px;
+            }
+            #reset-zoom {
+                font-size: 2.5rem;
+                padding-left: 5px;
+            }
+        }
+    }
+
+    #game-card-sample {
+        display: none;
+    }
+
+    #card-area {
+        pointer-events: none;
+        position: absolute;
+        right: 5px;
+        top: 0;
+        width: 300px;
+        z-index: 1000;
+
+        .game-card {
+            display: none;
+            position: relative;
+            opacity: 0.5;
+            height:60px;
+
+            .card-icon {
+                display: none;
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                font-size: 1.3rem;
+                opacity: 0.5;
+
+                img {
+                    width: 75px;
+                }
+            }
+
+            .generic-address {
+                font-size: 0.3rem;
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                opacity: 0.9;
+            }
+
+            .gameplay-card {
+                height: 100%;
+                @include transition(all, 0.5s, linear);
+
+                background-position: center;
+                background-size: cover;
+                background-image: radial-gradient(rgba($card-white, .333) 50%, rgba($card-yellow, .667));
+                background-color: $card-white;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+            .card-title {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                img {
+                    max-width: 90%;
+                    padding: 5px;
+                }
+            }
+        }
+
+        .game-card:first-child {
+            display: block;
+            height: 150px;
+            opacity: 1;
+            
+            .gameplay-card {
+                background-color: $highlight-color;
+            }
+
+            .card-icon {
+                display:block;
+            }
+        }
+
+        @media #{$medium-and-up} {
+            .game-card {
+                display: block;
+            }
+        }
+    }
+}
+
+.gameplay[data-mode='flag'] #card-area .game-card .gameplay-card {
+    .card-icon{
+        display: initial;
+        img{
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            width: 20%;
+        }
+    }
+}
+
+.gameplay[data-mode='flag'] #card-area .game-card:first-child .gameplay-card {
+    .generic-address {
+        display: none;
+    }
+    .card-icon {
+        display: none;
+    }
+}
+
+.game-mode-select-gameplay {
+    font-size: 2.5rem;
+    padding: 10px;
+
+    // TODO decide on colors
+
+    &.disabled {
+        color: #666;
+
+        &:hover {
+            cursor: not-allowed;
+        }
+    }
+}
+
+.game-mode-icon-disabled {
+    text-shadow: -1px 1px 0 #000,
+				1px 1px 0 #000,
+				1px -1px 0 #000,
+				-1px -1px 0 #000;
+
+    &.mdi-earth {
+        color: #bebebe;
+    }
+
+    &.mdi-bank {
+        color: #bebebe;
+    }
+
+    &.mdi-crown {
+        color: #bebebe;
+    }
+
+    &.mdi-flag {
+        color: #bebebe;
+    }
+
+    &.mdi-map-marker {
+        color: #bebebe;
+    }
+
+    &.mdi-script-text {
+        color: #bebebe;
+    }
+
+    &.mdi-brain {
+        color: #bebebe;
+    }
+
+    &.mdi-pencil-outline {
+        color: #bebebe;
+    }
+}
+
+.game-mode-icon-selected {
+    text-shadow: -1px 1px 0 #000,
+				1px 1px 0 #000,
+				1px -1px 0 #000,
+				-1px -1px 0 #000;
+
+    &.mdi-earth {
+        color: #4fc3f7;
+    }
+
+    &.mdi-bank {
+        color: #4d4d4d;
+    }
+
+    &.mdi-crown {
+        color: #fff176;
+    }
+
+    &.mdi-flag {
+        color: #e57373;
+    }
+
+    &.mdi-map-marker {
+        color: #69f0ae;
+    }
+
+    &.mdi-script-text {
+        color: #fca259;
+    }
+
+    &.mdi-brain {
+        color: #ed66ff;
+    }
+
+    &.mdi-pencil-outline {
+        color: #5dffff;
+    }
+}
+
+#map-message-gameplay {
+    position: fixed;
+    bottom: 0px;
+    left: 30px;
+    opacity: 0.9;
+    font-size: 1.1rem;
+}
+
+#mode-message-gameplay {
+    position: fixed;
+    bottom: 0px;
+    right: 30px;
+    opacity: 0.9;
+    font-size: 1.1rem;
+}
+
+#draggable-area {
+    position: absolute;
+    right: 5px;
+    top: 0px;
+    width: 300px;
+    z-index: 1001;
+
+    #card-draggable {
+        height: 150px;
+        width: 300px;
+        position: absolute;
+        opacity: 1;
+        // right: 5px;
+        top: 7px;
+        z-index: 2000;
+    
+        .card-icon {
+            display: none;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            font-size: 1.3rem;
+            opacity: 0.5;
+    
+            img {
+                width: 75px;
+            }
+        }
+    
+        .generic-address {
+            font-size: 0.3rem;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            opacity: 0.9;
+        }
+    
+        .gameplay-card {
+            height: 100%;
+            @include transition(all, 0.5s, linear);
+    
+            background-position: center;
+            background-size: cover;
+            background-image: radial-gradient(rgba($card-white, .333) 50%, rgba($card-yellow, .667));
+            background-color: $card-white;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-color: $highlight-color;
+        }
+    
+        .card-title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+    
+            img {
+                max-width: 90%;
+                padding: 5px;
+            }
+        }
+    }
+}

@@ -1,0 +1,186 @@
+/**
+ * Top nav bar and overflow menu
+ */
+nav {
+    position: fixed;
+    z-index: 27;
+
+    #logo {
+        background: url('/img/postcard.png') no-repeat;
+        background-size: contain;
+        background-position: center;
+        margin-left: 15px;
+        display: inline-block;
+        width: 150px;
+        height: $navbar-height-mobile;
+
+        @media #{$medium-and-up} {
+            height: $navbar-height;
+        }
+    }
+
+    #toggle-passport {
+        color:white!important;
+    }
+}
+
+#rv-nav {
+    background-color: #000;
+
+    #logo {
+        color: $primary-color;
+    }
+
+    #user-login {
+        font-size: 1.2rem;
+    }
+
+    #user-pic {
+        display: none;
+        width:2.2rem;
+        height:2.2rem;
+        background-size:2.2rem;
+        border-radius:2rem;
+        vertical-align:-0.7rem;
+        margin-left: 1rem;
+    }
+
+    #user-name {
+      font-size: 1.2rem;
+    }
+
+    #user-dropdown {
+        width: 100px;
+        min-width: 200px;
+        height: 115px;
+        overflow: hidden;
+
+        #user-dropdown-header {
+            vertical-align: middle;
+            padding: 10px;
+        }
+
+        .user-icon-def {
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            float: left;
+
+            i {
+                font-size: 3em;
+                vertical-align: middle;
+                line-height: 50px;
+            }
+        }
+
+        .user-icon-pic {
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            float: left;
+
+            a {
+                width: 2.7em;
+                height: 2.7em;
+                background-size:2.7em;
+                border-radius:1.3em;
+                vertical-align: middle;
+            }
+        }
+
+        #user-title {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: #989898;
+
+            span {
+                display: block;
+                line-height: 25px;
+                vertical-align: middle;
+                font-size: 1.1rem;
+            }
+        }
+
+        #user-action {
+            background-color: #eee;
+            padding: 10px;
+            height: 45px;
+            vertical-align: middle;
+
+            a {
+                display: inline-block;
+                padding: 0;
+                margin: 0;
+            }
+
+            #profile-link {
+                float: left;
+                font-size: 1.2em;
+                height: 25px;
+                line-height: 25px;
+                color: #999;
+
+                &:hover {
+                    color: #000;
+                }
+            }
+
+            .login-button,
+            .logout-button {
+                font-size: 1.5em;
+                float: right;
+                display:none;
+
+                i {
+                    line-height: 25px;
+                    height: 25px;
+                    display:block;
+                }
+            }
+        }
+    }
+
+    .dropdown-content {
+        min-width: 50px;
+
+        li:hover, a:hover {
+            background-color: transparent;
+        }
+
+        i {
+            color: $primary-color;
+            @include transition(all 0.3s ease-in);
+            font-size: 1.2em;
+        }
+
+        i:hover {
+            color: #000;
+        }
+    }
+
+    .hidden-breadcrumb {
+        display: none;
+    }
+
+    #nav-breadcrumbs {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+
+        a {
+            color: rgba(255, 255, 255, 0.7);
+
+            &:hover {
+                color: rgba(255, 255, 255, 0.3);
+            }
+        }
+    }
+
+    .user-pic {
+        width: 50px;
+        height: 50px;
+    }
+}

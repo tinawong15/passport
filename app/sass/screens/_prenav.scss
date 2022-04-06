@@ -1,0 +1,217 @@
+#prenav-screen {
+  #prenav-ui {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+    margin-bottom: 100px;
+
+    #greetings-postcard {
+      justify-self: center;
+      width: 600px;
+      height: fit-content;
+      text-align: left;
+      margin-top: 50px;
+      position: relative;
+
+      h3 {
+        margin-left: 20px;
+        font-family: "Dancing Script", cursive;
+        color: black;
+      }
+      canvas {
+        width: 100%;
+        height: 200px;
+      }
+
+      #transparent-name-overlay {
+        opacity: 0;
+        font-family: "VacationPostcardNF";
+        position: absolute;
+      }
+
+      .card-icon img {
+        width: 100px;
+      }
+
+      #rank-wrapper {
+        display: none;
+        color: black;
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    #close-overlay {
+      min-height: 50px;
+    }
+    #howtoplay-cards {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100vw;
+      justify-content: center;
+      .howtoplay-card {
+        padding-top: 50px;
+        margin: 10px;
+        position: relative;
+        color: black;
+        width: 800px;
+        height: 600px;
+
+        .generic-address {
+          position: absolute;
+          left: 2%;
+          top: 0px;
+          font-size: 0.9rem;
+          text-align: left;
+        }
+
+        .prenav-card-stamp {
+          position: absolute;
+          top: 0;
+          right: 5px;
+          font-size: 3.5rem;
+        }
+
+        #capital-stamp {
+          top: 5px;
+          right: 10px;
+          font-size: 3.7rem;
+        }
+
+        .howtoplay-info {
+          font-size: 1.75rem;
+          text-align: center;
+
+          strong {
+            font-size: 2.5rem;
+          }
+        }
+        .howtoplay-list {
+          padding-left: 40px;
+          padding-right: 20px;
+          font-size: 1.75rem;
+          text-align: left;
+        }
+
+        .left {
+          padding-left: 40px;
+        }
+      }
+    }
+    #prenav-cards {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100vw;
+      justify-content: center;
+
+      .prenav-card {
+        margin: 10px;
+        position: relative;
+        color: black;
+        width: 400px;
+        height: 240px;
+
+        .generic-address {
+          position: absolute;
+          left: 2%;
+          top: 0px;
+          font-size: 0.9rem;
+          text-align: left;
+        }
+
+        .prenav-card-stamp {
+          position: absolute;
+          top: 0;
+          right: 5px;
+          font-size: 3.5rem;
+        }
+
+        #capital-stamp {
+          top: 5px;
+          right: 10px;
+          font-size: 3.7rem;
+        }
+
+        .prenav-card-info {
+          position: absolute;
+          left: 50%;
+          top: 60%;
+          width: 90%;
+          transform: translate(-50%, -50%);
+          font-size: 1.75rem;
+          text-align: center;
+
+          strong {
+            font-size: 2.5rem;
+          }
+        }
+
+        .left {
+          padding-left: 40px;
+        }
+      }
+    }
+    #gametype-cards {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100vw;
+      justify-content: center;
+
+      .gametype-card {
+        margin: 10px;
+        position: relative;
+        color: black;
+        width: 600px;
+        height: 440px;
+
+        .generic-address {
+          position: absolute;
+          left: 2%;
+          top: 0px;
+          font-size: 0.9rem;
+          text-align: left;
+        }
+
+        .prenav-card-stamp {
+          position: absolute;
+          top: 0;
+          right: 5px;
+          font-size: 3.5rem;
+        }
+
+        #capital-stamp {
+          top: 5px;
+          right: 10px;
+          font-size: 3.7rem;
+        }
+
+        .gametype-info {
+          position: absolute;
+          left: 50%;
+          top: 60%;
+          width: 90%;
+          transform: translate(-50%, -50%);
+          font-size: 1.75rem;
+          text-align: center;
+
+          strong {
+            font-size: 2.5rem;
+          }
+        }
+
+        .left {
+          padding-left: 40px;
+        }
+      }
+    }
+    #button-overlays {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
+  }
+}

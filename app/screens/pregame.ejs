@@ -1,0 +1,24 @@
+<% include partials/header %>
+
+<!-- Page Content goes here -->
+
+<div id="pregame-screen" class="container-inner screen-overlay screen">
+    <div class="center">
+        <h3>
+            <%= capitalizedMode %>s of <%= capitalizedRegionName %><span id="subregion-type"></span>
+        </h3>
+        <p>
+            Your destinations are on the right side of the screen. Select the region
+            that corresponds to the green postcard. Upcoming destinations are found
+            below it.
+        </p>
+
+        <p>
+            Aim for diplomat status!
+        </p>
+
+
+        <button id="play-button" class="stamp-button" disabled>Play Now</button>
+    </div>
+</div>
+<% include partials/footer %>

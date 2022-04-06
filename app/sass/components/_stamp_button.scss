@@ -1,0 +1,22 @@
+.stamp-button {
+    font-family: 'MailartRubberstamp-Regular';
+    font-size: 3em;
+    color: #ef5350;
+    border: solid #ef5350;
+    border-radius: 10px;
+    background-color: transparent;
+    cursor: pointer;
+}
+.stamp-button:hover {
+    color: #d32f2f;
+    border: solid #d32f2f;
+}
+.stamp-button:active {
+    color: #b71c1c;
+    border: solid #b71c1c;
+    background-color: transparent;
+}
+.stamp-button:disabled {
+    color: #9e9e9e !important;
+    border: solid #9e9e9e !important;
+}

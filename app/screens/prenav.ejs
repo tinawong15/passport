@@ -1,0 +1,205 @@
+<% include partials/header %>
+
+<!-- Page Content goes here -->
+
+<div id="prenav-screen" class="container-inner screen-overlay screen">
+  <div id="prenav-ui">
+    <div id="greetings-postcard" class="prenav-card postcard">
+      <h3>Greetings from</h3>
+      <canvas id="postcard-canvas"></canvas>
+      <span id="transparent-name-overlay"></span>
+      <span class="card-icon">
+        <img src="/img/postcard.png" />
+      </span>
+      <div id="rank-wrapper">
+        <div><strong>Your Rank:</strong> <span class="user-rank"></span></div>
+      </div>
+    </div>
+
+    <!-- <p>
+            You may explore the map and learn about the region. Hover over a subregion to view an infocard
+            with details about it. To navigate deeper, click on any subregion.
+        </p>
+
+        <p>
+            To start a game in this region, click the icons in the bottom left corner. Modes available are as follows:
+        </p> -->
+
+    <div id="howtoplay-cards" class="overlay">
+      <div id="howtoplay-card-1" class="howtoplay-card postcard">
+        <div class="generic-address">
+          ___________<br />
+          _______________________<br />
+          _______________________
+        </div>
+        <div class="prenav-card-stamp">
+          <i class="game-mode-icon mdi mdi-earth"></i>
+        </div>
+        <div class="howtoplay-info">
+          <strong>How To Play</strong><br />
+          <ul class="howtoplay-list">
+            <li>
+              Regio Vinco is a browser based game where you can test your
+              geographic knowledge of various regions from all over the globe
+            </li>
+            <li>
+              To get started, click next to view the various subjects that you
+              will be tested on
+            </li>
+            <li>
+              If you just want to explore the map, you can hit view map on the
+              bottom of screen at anytime.
+            </li>
+            <li>
+              When viewing the map, hover over a subregion to view an infocard
+              with details about it. To navigate deeper, click on any subregion
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="prenav-cards" class="overlay">
+      <div id="region-card" class="prenav-card postcard">
+        <div class="generic-address">
+          ___________<br />
+          _______________________<br />
+          _______________________
+        </div>
+        <div class="prenav-card-stamp">
+          <i class="game-mode-icon mdi mdi-earth"></i>
+        </div>
+        <div class="prenav-card-info">
+          <strong><span class="subregion-type">Region Name</span></strong
+          ><br />
+          Name the
+          <span class="subregion-type">country, state, city, etc.</span>
+        </div>
+      </div>
+      <div id="capital-card" class="prenav-card postcard">
+        <div class="generic-address">
+          ___________<br />
+          _______________________<br />
+          _______________________
+        </div>
+        <div id="capital-stamp" class="prenav-card-stamp">
+          <i class="game-mode-icon mdi mdi-bank"></i>
+        </div>
+        <div class="prenav-card-info">
+          <strong>Capitals</strong><br />
+          Do you know where all the governments sit?
+        </div>
+      </div>
+      <div id="leader-card" class="prenav-card postcard">
+        <div class="generic-address">
+          ___________<br />
+          _______________________<br />
+          _______________________
+        </div>
+        <div class="prenav-card-stamp">
+          <i class="game-mode-icon mdi mdi-crown"></i>
+        </div>
+        <div class="prenav-card-info">
+          <strong>Leaders</strong><br />
+          Who is in charge?
+        </div>
+      </div>
+      <div id="flag-card" class="prenav-card postcard">
+        <div class="generic-address">
+          ___________<br />
+          _______________________<br />
+          _______________________
+        </div>
+        <div class="prenav-card-stamp">
+          <i class="game-mode-icon mdi mdi-flag"></i>
+        </div>
+        <div class="prenav-card-info">
+          <strong>Flags</strong><br />
+          Fun with Flags
+        </div>
+      </div>
+      <div id="landmarks-card" class="prenav-card postcard">
+        <div class="generic-address">
+          ___________<br />
+          _______________________<br />
+          _______________________
+        </div>
+        <div class="prenav-card-stamp">
+          <i class="game-mode-icon mdi mdi-map-marker"></i>
+        </div>
+        <div class="prenav-card-info">
+          <strong>Landmarks</strong><br />
+          From the Pyramids of Giza to the World's Largest Truck Stop in Iowa
+        </div>
+      </div>
+    </div>
+
+    <div id="gametype-cards" class="overlay">
+        <div id="learningmode-card" class="gametype-card postcard">
+            <div class="generic-address">
+              ___________<br />
+              _______________________<br />
+              _______________________
+            </div>
+            <div class="prenav-card-stamp">
+              <i class="game-mode-icon mdi mdi-script-text""></i>
+            </div>
+            <div class="gametype-info">
+              <strong>Learning Mode</strong><br />
+              For Regions you have no prior knowledge:<br /> Drag the current card on the top right corner of the screen
+              to the sub-region currently highlighted
+              <br />
+              No score will be kept
+            </div>
+          </div>
+          <div id="trainingmode-card" class="gametype-card postcard">
+            <div class="generic-address">
+              ___________<br />
+              _______________________<br />
+              _______________________
+            </div>
+            <div class="prenav-card-stamp">
+              <i class="game-mode-icon mdi mdi-brain""></i>
+            </div>
+            <div class="gametype-info">
+              <strong>Training Mode</strong><br />
+              For those who need more practice:<br /> Drag the current card on the top right corner of the screen
+              to the correct sub-region. The game will no longer highlight the correct region, you must select it yourself
+              <br />
+              No score will be kept
+            </div>
+          </div>
+        
+        <div id="travelmode-card" class="gametype-card postcard">
+            <div class="generic-address">
+              ___________<br />
+              _______________________<br />
+              _______________________
+            </div>
+            <div class="prenav-card-stamp">
+              <i class="game-mode-icon mdi mdi-pencil-outline""></i>
+            </div>
+            <div class="gametype-info">
+              <strong>Travel Mode</strong><br />
+              For those who want to test their knowledge:<br /> Click on the correct sub-region that corrisponds to the info
+              being displayed on the current card on the top right corner of the screen
+              <br />
+              Score will be recorded
+            </div>
+            </div>
+        </div>
+        <div id="button-overlays">
+            <button id="previous-overlay" class="stamp-button" disabled>Previous</button>
+            <button id="close-overlay" class="stamp-button" disabled>View Map</button>
+            <button id="next-overlay" class="stamp-button" disabled>Next</button>
+        </div>
+    </div>
+    
+    
+
+
+</div>
+        
+          
+  
+<% include partials/footer %>

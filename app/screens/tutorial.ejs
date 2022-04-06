@@ -1,0 +1,30 @@
+<% include partials/header %>
+<div id="tutorial-screen" class="container-inner gameplay screen">
+    <div id="map">
+        <div id="gameplayhud">
+            <% include partials/gameplayhud %>
+        </div>
+    </div>
+    <div id="navhud">
+        <% include partials/navhud %> 
+    </div>
+    <% include partials/infocard %>
+    <div id="tutorial-postcard" class="postcard">
+        <div class="generic-address">
+            ----------------<br />
+            ------------------------------------<br />
+            ------------------------------------
+        </div>
+        <div id="tutorial-text-area">
+            <span id="tutorial-text">test</span>
+        </div>
+        <div id="footer">
+            <button id="advance-tutorial" class="stamp-button">OK</button>
+            <a href='/' id="home-tutorial" class="stamp-button">HOME</a>
+        </div>
+        <span class="card-icon">
+            <img src="/img/postcard.png" />
+        </span>
+    </div>
+</div>
+<% include partials/footer %>

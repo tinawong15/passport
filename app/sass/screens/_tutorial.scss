@@ -1,0 +1,62 @@
+#tutorial-screen {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+
+    #tutorial-postcard {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-width: 50vmin;
+        width: 300px;
+        min-height: 30vmin;
+        height: 300px;
+        text-align: left;
+        margin: 5px;
+        color: black;
+
+        .generic-address {
+            font-size: .75em;
+            margin: 10px 0 0 15px;
+            opacity: 0.9;
+        }
+
+        .card-icon img {
+            width: 100px;
+        }
+
+        #tutorial-text-area {
+            padding: 10px;
+            padding-top: 20px;
+            width: 100%;
+            min-height: 100px;
+            font-size: 1.5em;
+            text-indent: 20px;
+            overflow-y: scroll;
+        }
+
+        #footer {
+            display: flex;
+            justify-content: flex-end;
+            padding: 0 5px 5px;
+
+            #home-tutorial {
+                display: none;
+            }
+        }
+    }
+
+    #gameplayhud {
+        display: none;
+        div {
+            z-index: 1000;
+        }
+    }
+
+    #navhud {
+        display: none;
+    }
+}

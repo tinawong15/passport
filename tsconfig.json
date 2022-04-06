@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "sourceMap": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "target": "ES2016",
+        "typeRoots" : ["app/types"],
+        "types" : ["jquery", "materialize-css", "leaflet"]
+    },
+    "include": [
+        "app/frontend/**/*",
+        "app/view-models/**/*"    
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

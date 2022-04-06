@@ -1,0 +1,110 @@
+$small-screen-up: 800px !default;
+$medium-screen-up: 1024px !default;
+$large-screen-up: 1201px !default;
+$small-screen: 799px !default;
+$medium-screen: 1023px !default;
+$large-screen: 1200px !default;
+
+$navbar-height-mobile: 35px;
+$navbar-height: 54px;
+
+@import 'materialize/materialize';
+
+$primary-color: #267fb6;
+$background-color: #000;
+$highlight-color: #7fb626;
+$error-highlight-color: #b65d26;
+$card-white: #fbf8e5;
+$card-yellow: #f1e9ae;
+
+// Small heights
+$small-height: 400px;
+$small-height-up: 401px;
+$small-height-and-down: "only screen and (max-height : #{$small-height})" !default;
+
+// Medium heights
+$medium-height: 511px;
+$medium-height-up: 512px;
+$medium-height-and-down: "only screen and (max-height : #{$medium-height})" !default;
+$medium-height-and-up: "only screen and (min-height : #{$medium-height-up})" !default;
+
+// Large height
+$large-height: 766px;
+$large-height-up: 767px;
+$medium-to-large: "only screen and (min-height: #{$medium-height-up}) and (max-height : #{$large-height})" !default;
+$large-height-up: "only screen and (min-height : #{$large-height-up})" !default;
+
+/* util mixins and classes */
+@import 'components/util';
+
+/* Start Regio Vinco CSS */
+body {
+    background: $background-color;
+    font-size: 12px;
+}
+
+.center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+    position: absolute;
+}
+
+.center-x {
+    text-align: center;
+}
+
+a {
+    @include transition(all 0.3s linear);
+}
+
+.container {
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+
+    .row {
+        margin-right: 0;
+    }
+}
+
+.container-inner {
+    height: 100%;
+    padding-top: $navbar-height-mobile;
+    position: relative;
+
+    @media #{$medium-and-up} {
+        padding-top: $navbar-height;
+    }
+}
+
+.row {
+    margin-bottom: 0;
+}
+
+.screen {
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+#audios {
+    display: none;
+}
+
+// include components
+@import 'components/menu';
+@import 'components/cards';
+@import 'components/overlay';
+@import 'components/loader';
+@import 'components/map';
+@import 'components/stamp_button';
+@import 'screens/prenav';
+@import 'screens/nav_hud';
+@import 'screens/gameplay';
+@import 'screens/splash';
+@import 'screens/settings';
+@import 'screens/victory';
+@import 'screens/tutorial';
+@import 'screens/user';
+@import 'screens/passport';
+@import 'screens/auth';

@@ -1,0 +1,18 @@
+#splash-screen {
+    color: #fff;
+
+    #splash-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+#splash-logo {
+    max-width: 99vw;
+    max-height: 79vh;
+    max-height: -webkit-calc(99vh - 100px);
+    max-height: -moz-calc(99vh - 100px);
+    max-height: calc(99vh - 100px);
+}

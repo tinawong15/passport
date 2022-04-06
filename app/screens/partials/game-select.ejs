@@ -1,0 +1,81 @@
+<!-- GAME SELECT POPUP -->
+<div hidden="true" id="game-select">
+    <!-- BACK BUTTON -->
+    <a id="hide-button" onclick="hide()">BACK</a>
+    <br><br>
+
+    <!-- LEARN/TRAIN/TEST MODE RADIO BOXES -->
+    <input checked id="learn-mode-radio" class="mode-select-radio" type="radio" name="gametype" value="learn">
+    <label for="learn-mode-radio">Learn</label>
+    <input id="train-mode-radio" class="mode-select-radio" type="radio" name="gametype" value="train">
+    <label for="train-mode-radio">Train</label>
+    <input id="test-mode-radio" class="mode-select-radio" type="radio" name="gametype" value="test">
+    <label for="test-mode-radio">Test</label>
+    <br><br>
+
+    <!-- NAME/CAPITAL/LEADER/LANDMARK/FLAG MODE RADIO BOXES -->
+    <input checked id="name-mode-radio" type="radio" name="gamemode" value="name">
+    <label for="name-mode-radio">Name</label>
+    <input id="capital-mode-radio" type="radio" name="gamemode" value="capital">
+    <label for="capital-mode-radio">Capital</label>
+    <input id="leader-mode-radio" type="radio" name="gamemode" value="leader">
+    <label for="leader-mode-radio">Leader</label>
+    <input id="landmarks-mode-radio" type="radio" name="gamemode" value="landmark">
+    <label for="landmarks-mode-radio">Landmarks</label>
+    <input id="flag-mode-radio" type="radio" name="gamemode" value="flag">
+    <label for="flag-mode-radio">Flag</label>
+    <br><br>
+
+    <!-- SUBMIT BUTTON -->
+    <a id="submit-button" onclick="submit()">PLAY</a>
+</div>
+
+
+<script>
+    // hide this popup
+    function hide() {
+        console.log("hide game select");
+        $("#game-select").css("display", "none");
+    }
+
+    // submit the above form and start a game
+    function submit() {
+        console.log("submit");
+        // get game type
+        let gameType = "";
+        if ($("#learn-mode-radio").is(":checked")) {
+            gameType = "learn";
+        } else if ($("#train-mode-radio").is(":checked")) {
+            gameType = "train";
+        } else if ($("#test-mode-radio").is(":checked")) {
+            gameType = "test";
+        }
+        console.log(gameType);
+
+        // get gamemode
+        let gamemode = "";
+        if ($("#name-mode-radio").is(":checked")) {
+            gamemode = "name";
+        } else if ($("#capital-mode-radio").is(":checked")) {
+            gamemode = "capital";
+        } else if ($("#leaders-mode-radio").is(":checked")) {
+            gamemode = "leader";
+        } else if ($("#landmarks-mode-radio").is(":checked")) {
+            gamemode = "landmarks";
+        } else if ($("#flag-mode-radio").is(":checked")) {
+            gamemode = "flag";
+        }
+        console.log(gamemode);
+
+        // if invalid alert the user, else reroute the page
+        if (gameType === "" || gamemode === "") {
+            alert("You must pick at least one of each mode");
+            return;
+        } else {
+            window.location.href = "/gameplay?region=<%=encodeURIComponent(regionPath) %>&mode="
+                        + encodeURIComponent(gamemode) + "&type" + encodeURIComponent(gameType);
+        }
+
+        // /gameplay?region=<%=encodeURIComponent(regionPath) %>&mode=landmarks
+    }
+</script>

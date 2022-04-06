@@ -1,0 +1,15 @@
+{
+    "grades": ["S+", "S", "A+", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "D-", "F" ],
+    "score_reqs":
+        {"S+":100, "S":100, "A+":97, "A":94, "A-":90, "B+":87, "B":84, "B-":80, "C+":77, "C":74, "C-":70, "D+":67, "D":64, "D-":60, "F":0 },
+    "time_reqs":
+        {"S+":1, "S":2},
+    "ranks": {
+        "S+":"Distinguished Dignitary",     "S":"Dignitary",
+        "A+":"Distinguished Ambassador",    "A":"Ambassador",   "A-":"Novice Ambassador",
+        "B+":"Distinguished Emissary",	    "B":"Emissary",	    "B-":"Novice Emissary",
+        "C+":"Savvy Traveller",             "C":"Traveller",    "C-":"Novice Traveller",
+        "D+":"Savvy Tourist",	            "D":"Tourist",	    "D-":"Novice Tourist",
+                                            "F":null
+    }
+}

@@ -1,0 +1,12 @@
+  @font-face {
+     font-family: 'MailartRubberstamp-Regular';
+     src: url('#{$mailart-rubberstamp-font-path}MailartRubberstamp-Regular.eot');
+     src: url('#{$mailart-rubberstamp-font-path}MailartRubberstamp-Regular.eot?#iefix') format('embedded-opentype'),
+          url('#{$mailart-rubberstamp-font-path}MailartRubberstamp-Regular.svg#MailartRubberstamp-Regular') format('svg'),
+          url('#{$mailart-rubberstamp-font-path}MailartRubberstamp-Regular.ttf') format('truetype'),
+          url('#{$mailart-rubberstamp-font-path}MailartRubberstamp-Regular.woff') format('woff'),
+          url('#{$mailart-rubberstamp-font-path}MailartRubberstamp-Regular.woff2') format('woff2');
+     font-weight: normal;
+     font-style: normal;
+   }
+   

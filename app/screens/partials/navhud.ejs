@@ -1,0 +1,109 @@
+<div id="map-message">
+  <p>
+    <a
+      href="/gameplay?region=<%=encodeURIComponent(regionPath) %>&mode=name"
+      id="name-link"
+      class="game-mode-select tooltipped"
+      data-tooltip="Regions"
+      data-position="top"
+    >
+      <i class="game-mode-icon mdi mdi-earth"></i>
+    </a>
+    <a
+      href="/gameplay?region=<%=encodeURIComponent(regionPath) %>&mode=capital"
+      id="capital-link"
+      class="game-mode-select tooltipped"
+      data-tooltip="Capitals"
+      data-position="top"
+    >
+      <i class="game-mode-icon mdi mdi-bank"></i>
+    </a>
+    <a
+      href="/gameplay?region=<%=encodeURIComponent(regionPath) %>&mode=leader"
+      id="leader-link"
+      class="game-mode-select tooltipped"
+      data-tooltip="Leaders"
+      data-position="top"
+    >
+      <i class="game-mode-icon mdi mdi-crown"></i>
+    </a>
+    <a
+      href="/gameplay?region=<%=encodeURIComponent(regionPath) %>&mode=flag"
+      id="flag-link"
+      class="game-mode-select tooltipped"
+      data-tooltip="Flags"
+      data-position="top"
+    >
+      <i class="game-mode-icon mdi mdi-flag"></i>
+    </a>
+    <a
+      href="/gameplay?region=<%=encodeURIComponent(regionPath) %>&mode=landmarks"
+      id="landmarks-link"
+      class="game-mode-select tooltipped"
+      data-tooltip="Landmarks"
+      data-position="top"
+    >
+      <i class="game-mode-icon mdi mdi-map-marker"></i>
+    </a>
+  </p>
+
+  <p>
+    <span id="availability"></span>
+  </p>
+</div>
+
+<div id="mode-message">
+  <p>
+    <a
+      href="/gameplay?region=<%=encodeURIComponent(regionPath) %>&mode=name&type=learn"
+      id="learn-link"
+      class="game-mode-select tooltipped"
+      data-tooltip="Learn Mode"
+      data-position="top"
+    >
+      <i class="game-mode-icon mdi mdi-script-text"></i>
+    </a>
+    <a
+      href="/gameplay?region=<%=encodeURIComponent(regionPath) %>&mode=name&type=train"
+      id="train-link"
+      class="game-mode-select tooltipped"
+      data-tooltip="Train Mode"
+      data-position="top"
+    >
+      <i class="game-mode-icon mdi mdi-brain"></i>
+    </a>
+    <a
+      href="/gameplay?region=<%=encodeURIComponent(regionPath) %>&mode=name&type=test"
+      id="test-link"
+      class="game-mode-select tooltipped"
+      data-tooltip="Test Mode"
+      data-position="top"
+    >
+      <i class="game-mode-icon mdi mdi-pencil-outline"></i>
+    </a>
+
+    <a id="show-button" onclick="show()">PLAY</a>
+  </p>
+</div>
+
+<div id="search-region" class="z-depth-5">
+  <div class="input-field">
+    <i class="mdi mdi-magnify prefix"></i>
+    <input
+      id="regions-search"
+      type="text"
+      class="validate"
+      placeholder="Enter a region name."
+    />
+    <button id="submit-stamp-button" class="right">
+      <i class="mdi mdi-send"></i>
+    </button>
+  </div>
+</div>
+
+<script>
+  function show() {
+    console.log("show mode select");
+    $("#game-select").css("display", "block");
+  }
+</script>

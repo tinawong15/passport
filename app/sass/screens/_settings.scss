@@ -1,0 +1,15 @@
+#settings-content {
+    width: 80vw;
+    margin: auto;
+    font-size: 1.3rem;
+
+    .collection {
+        border: 0;
+    }
+
+    .collection.with-header .collection-header, .collection-item {
+        color: #fff;
+        background: transparent;
+        padding: 20px;
+    }
+}
