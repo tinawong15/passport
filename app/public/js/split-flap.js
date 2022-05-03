@@ -1,6 +1,5 @@
 ﻿/* eslint-disable no-console */
 /* global $ _ Backbone */
-
 // Home Sweet Global Namespace
 var sf = {};
 

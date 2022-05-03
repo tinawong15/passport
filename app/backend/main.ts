@@ -4,6 +4,8 @@ import favicon = require('serve-favicon');
 import logger = require('morgan');
 import cookieParser = require('cookie-parser');
 import * as bodyParser from 'body-parser';
+const fs = require('fs');
+
 import * as session from 'express-session';
 import {FirestoreStore} from '@google-cloud/connect-firestore';
 
@@ -35,6 +37,15 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use(favicon(path.join('app', 'public', 'img', 'favicon.ico')));
 
 app.use(auth.auth);
+
+app.use('/temp/general-info', (req, res) => {
+  let raw = fs.readFileSync(path.join(__dirname,'/data/generalInformation.json'));
+  let countries = JSON.parse(raw).data;
+  let r = {
+    data: countries
+  };
+  res.json(r);
+});
 
 import screens = require('./controllers/screen-controller');
 app.use('/', screens);

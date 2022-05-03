@@ -1,0 +1,9 @@
+{
+	"data": [
+        {"name": "Spain", "capital": "MAD","leader": "Sanchez"},
+        {"name": "France","capital": "PAR","leader": "Macron"},
+        {"name": "United Kingdom","capital": "LDN","leader": "Johnson"},
+        {"name": "Germany","capital": "BER","leader": "Scholz"},
+        {"name": "Ireland","capital": "DUB","leader": "Martin"}
+    ]
+}
