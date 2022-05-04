@@ -7,29 +7,29 @@
     <!-- ============================================ -->
     <!-- CONTAINER -->
     <div id="board" class="chartContainer splitflap">
-      <h1>Europe Train Information
+      <h5 style="color:black;">
+        Europe Train Information
+        <span style="margin-left:30px;font-size:15px;">
         <button onclick="location.href='/modes.html';">All Statistics</button>
         <button onclick="location.href='/personal.html';">Region Game</button>
         <button onclick="location.href='/index.html';">General Information</button>
-      </h1>
+      </span>
+      </h5>
+      <br>
       <!-- Header: 30px/char, 15px/separator, 120px/logo -->
-      <div class="header" style="width:120px;margin-left:0px;">Flag</div>
-      <div class="header" style="width:390px;margin-left:30px;text-align:left;">
+      <div class="header" style="color:black;width:390px;margin-left:30px;text-align:left;">
         Destination
       </div>
-      <div class="header" style="width:120px;margin-left:30px;">Stops</div>
-      <div class="header" style="width:120px;margin-left:30px;text-align:left;">
+      <div class="header" style="color:black;width:120px;margin-left:30px;">Stops</div>
+      <div class="header" style="color:black;width:120px;margin-left:30px;text-align:left;">
         Capital
       </div>
-      <div class="header" style="width:270px;margin-left:30px;text-align:left;">Conductor</div>
+      <div class="header" style="color:black;width:270px;margin-left:30px;text-align:left;">Conductor</div>
 
       <!-- rows will be placed here dynamically from #row_template -->
     </div>
     <script type="text/template" id="row_template">
       <div class="row">
-        <div class="group airline"> <!-- airline -->
-          <div class="image"><span></span></div>
-        </div>
         <div class="group destination"> <!-- city -->
           <div class="character"><span></span></div>
           <div class="character"><span></span></div>
@@ -127,7 +127,7 @@
 
 <div class="passport-pages">
   <div class="passport-header">
-    BOARD
+    Board
   </div>
   <div class="passport-content">
 
