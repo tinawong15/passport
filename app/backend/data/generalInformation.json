@@ -1,9 +1,9 @@
 {
 	"data": [
-        {"destination": "Spain", "capital": "MAD","leader": "Sanchez"},
-        {"destination": "France","capital": "PAR","leader": "Macron"},
-        {"destination": "United Kingdom","capital": "LDN","leader": "Johnson"},
-        {"destination": "Germany","capital": "BER","leader": "Scholz"},
-        {"destination": "Ireland","capital": "DUB","leader": "Martin"}
+        {"destination": "Spain", "stops": 102, "capital": "MAD","leader": "Sanchez"},
+        {"destination": "France", "stops": 110, "capital": "PAR","leader": "Macron"},
+        {"destination": "United Kingdom", "stops": 57, "capital": "LDN","leader": "Johnson"},
+        {"destination": "Germany", "stops": 90, "capital": "BER","leader": "Scholz"},
+        {"destination": "Ireland", "stops": 120, "capital": "DUB","leader": "Martin"}
     ]
 }

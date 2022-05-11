@@ -1,9 +1,0 @@
-{
-	"data": [
-        {"destination": "Spain", "capital": "MAD","leader": "Sanchez"},
-        {"destination": "France","capital": "PAR","leader": "Macron"},
-        {"destination": "United Kingdom","capital": "LDN","leader": "Johnson"},
-        {"destination": "Germany","capital": "BER","leader": "Scholz"},
-        {"destination": "Ireland","capital": "DUB","leader": "Martin"}
-    ]
-}

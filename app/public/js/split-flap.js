@@ -103,7 +103,6 @@ sf.Items = Backbone.Collection.extend({
             results.length <= maxResults ? results.length : maxResults,
           numPages = Math.ceil(numResults / numRows),
           pageInterval = options.pageInterval || 30000;
-
         let i = 0,
           page = 0;
 
@@ -157,7 +156,7 @@ sf.Items = Backbone.Collection.extend({
     // create the Collection
     items = new sf.Items(); // NOTE GLOBAL!
     items.url = sf.plugins[options.plugin].url(options);
-
+    console.log(items);
     // check if we're using jsonp
     // TODO: do we still need this? It's 2019!
     if (sf.plugins[options.plugin].dataType === 'jsonp') {
