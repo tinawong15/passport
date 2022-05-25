@@ -15,7 +15,7 @@
         .passport-pages {
             background-color: $card-white;
             background-image: radial-gradient($card-white 50%, $card-yellow);
-            
+
             &.even {
                 border-radius: 20px 0 0 20px;
             }
@@ -68,10 +68,10 @@
             }
 
             .passport-input-prompt,
-            .passport-header, 
-            .passport-sub-header, 
+            .passport-header,
+            .passport-sub-header,
             .passport-left-sub-header,
-            .passport-text, 
+            .passport-text,
             .passport-text-caps,
             .visas-footer {
                 font-family: 'OCRB';
@@ -112,7 +112,7 @@
             .typewriter {
                 font-family: 'SpecialElite-Regular';
                 font-size:1vw;
-            }         
+            }
             .passport-input-prompt {
                 font-size:10pt;
             }
@@ -126,7 +126,7 @@
                 left:5%;
             }
 
-            
+
             #credentials-name-box {
                 position:absolute;
                 width:90%;
@@ -199,7 +199,7 @@
                 position:absolute;
                 left:5%;
                 top:41%;
-                height:25%;                
+                height:25%;
             }
             #credentials-signature{
                 position:absolute;
@@ -276,8 +276,8 @@
                 left:5%;
                 text-align:left;
                 top:80%;
-            }   
-            
+            }
+
 
             .visas-entries-subheader{
                 position:absolute;
@@ -333,15 +333,15 @@
                     width:60%;
                     text-decoration:underline;
                     font-size:10pt;
-                    text-align: left;                  
+                    text-align: left;
                 }
 
             .board-text {
                     font-family: 'Solari'
                 }
-            
 
-            
+
+
 
             .cabinet-photo{
                 position:absolute;
@@ -404,10 +404,10 @@
             }
             .cabinet-data {
             }
-            
+
         }
     }
-    
+
         .passport-nav-button {
             position:absolute;
             width:9%;
@@ -426,7 +426,7 @@
             font-weight:bold;
             //opacity:100%;
         }
-        .passport-nav-tab-plastic {            
+        .passport-nav-tab-plastic {
             position:absolute;
             width:100%;
             height:100%;
@@ -529,7 +529,7 @@
     }
     #board-prototype{
         position:absolute;
-        background-color: #111111; 
+        background-color: #111111;
         width:70%;
         height:60%;
         left:15%;
@@ -556,7 +556,7 @@
 
         .board-text {
             font-family: 'Solari';
-            
+
         }
     }
     .scroller {
@@ -568,11 +568,11 @@
 .scroller::-webkit-scrollbar {
     width: 7.5px;
   }
-  
+
   .scroller::-webkit-scrollbar-track {
     background: white;
   }
-  
+
   .scroller::-webkit-scrollbar-thumb {
     background: #7f7f7f;
     border-right: 1px solid white;
@@ -589,10 +589,11 @@
   }
   #board {
     background: #0f0f0f;
-    margin-left: -10px;
+    margin-left: -40px;
   }
   .splitflap {
-    width: 1800px;
+    border-radius: 10px;
+    width: 680px;
     overflow: none;
     white-space: nowrap;
     margin: 20px 10px;
@@ -662,7 +663,7 @@
     background: url('../img/split-flap-letters-yellow-sm-full.png') no-repeat;
     background-position: -15px 0px; /* start with a space */
   }
-  
+
 /* SPACE AND TRANSITION IMAGES */
 .splitflap span.ctrn {
   background-position: 0px 0px;
@@ -950,4 +951,3 @@
   background-position: -5000px 0px;
 } /* , */
 }
-  
